@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nagahomestay | Kudus, Indonesia</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    header, footer { background: #333; color: white; padding: 15px; text-align: center; }
+    nav { text-align: center; margin: 20px; }
+    nav button { margin: 0 10px; padding: 10px 20px; cursor: pointer; }
+    .content { padding: 20px; max-width: 900px; margin: auto; }
+    .gallery img { width: 100%; max-width: 400px; margin: 10px; border-radius: 8px; }
+    .contact-button { display: inline-block; margin-top: 20px; padding: 10px 15px; background: green; color: white; text-decoration: none; border-radius: 5px; }
+    .language-id { display: none; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #eee; }
+    form { margin-top: 30px; }
+    label { display: block; margin-bottom: 5px; }
+    input, select, textarea { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nagahomestay</h1>
+    <p>Kudus, Central Java, Indonesia</p>
+  </header>
+
+  <nav>
+    <button onclick="showLang('en')">English</button>
+    <button onclick="showLang('id')">Bahasa Indonesia</button>
+  </nav>
+
+  <div class="content">
+    <!-- English Section -->
+    <div class="language-en">
+      <h2>Welcome to Nagahomestay</h2>
+      <p>Comfortable and affordable accommodation in Kudus. We offer clean rooms, private bathrooms, Wi-Fi, air conditioning, and a peaceful atmosphere for both short and long stays.</p>
+      <h3>Room Types & Prices</h3>
+      <table>
+        <tr><th>Room</th><th>Facilities</th><th>Price</th></tr>
+        <tr><td>Room 1</td><td>Double bed, private bathroom, no hot water, token not included</td><td>Editable</td></tr>
+        <tr><td>Room 2</td><td>Double bed, private bathroom, hot water, token included</td><td>Editable</td></tr>
+        <tr><td>Room 3</td><td>Bigger room, double bed, private bathroom, no hot water, token not included, ground floor</td><td>Editable</td></tr>
+      </table>
+      <h3>Facilities:</h3>
+      <ul>
+        <li>Private Bathroom</li>
+        <li>Double Beds</li>
+        <li>Wi-Fi</li>
+        <li>Parking Space</li>
+        <li>Shared Kitchen</li>
+        <li>24h Access</li>
+      </ul>
+      <h3>Contact & Booking</h3>
+      <a class="contact-button" href="https://wa.me/6282324135717?text=Do%20you%20have%20any%20rooms%20available%3F" target="_blank">Book via WhatsApp</a>
+
+      <form>
+        <h3>Booking Form</h3>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
+        <label for="room">Room Type</label>
+        <select id="room" name="room">
+          <option>Room 1</option>
+          <option>Room 2</option>
+          <option>Room 3</option>
+        </select>
+        <label for="message">Message / Special Request</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Submit (Not functional yet)</button>
+      </form>
+    </div>
+
+    <!-- Indonesian Section -->
+    <div class="language-id">
+      <h2>Selamat Datang di Nagahomestay</h2>
+      <p>Penginapan nyaman dan terjangkau di Kudus. Kami menyediakan kamar bersih, kamar mandi dalam, Wi-Fi, AC, dan suasana tenang untuk menginap harian atau bulanan.</p>
+      <h3>Jenis Kamar & Harga</h3>
+      <table>
+        <tr><th>Kamar</th><th>Fasilitas</th><th>Harga</th></tr>
+        <tr><td>Kamar 1</td><td>Tempat tidur double, kamar mandi dalam, tanpa air panas, token tidak termasuk</td><td>Bisa diedit</td></tr>
+        <tr><td>Kamar 2</td><td>Tempat tidur double, kamar mandi dalam, ada air panas, token termasuk</td><td>Bisa diedit</td></tr>
+        <tr><td>Kamar 3</td><td>Kamar lebih besar, tempat tidur double, kamar mandi dalam, tanpa air panas, token tidak termasuk, lantai dasar</td><td>Bisa diedit</td></tr>
+      </table>
+      <h3>Fasilitas:</h3>
+      <ul>
+        <li>Kamar Mandi Dalam</li>
+        <li>Tempat Tidur Double</li>
+        <li>Wi-Fi</li>
+        <li>Lahan Parkir</li>
+        <li>Dapur Bersama</li>
+        <li>Akses 24 Jam</li>
+      </ul>
+      <h3>Kontak & Pemesanan</h3>
+      <a class="contact-button" href="https://wa.me/6282324135717?text=Apakah%20masih%20ada%20kamar%20kosong%3F" target="_blank">Pesan lewat WhatsApp</a>
+    </div>
+
+    <div class="gallery">
+      <h3>Gallery</h3>
+      <img src="room.jpg" alt="Room">
+      <img src="hallway.jpg" alt="Hallway">
+      <img src="garden.jpg" alt="Garden">
+      <img src="bathroom.jpg" alt="Bathroom">
+      <img src="gate.jpg" alt="Front Gate">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Nagahomestay - Kudus, Central Java, Indonesia</p>
+  </footer>
+
+  <script>
+    function showLang(lang) {
+      document.querySelector('.language-en').style.display = (lang === 'en') ? 'block' : 'none';
+      document.querySelector('.language-id').style.display = (lang === 'id') ? 'block' : 'none';
+    }
+    showLang('en');
+  </script>
+</body>
+</html>
