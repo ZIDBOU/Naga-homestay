@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nagahomestay - Room Info</title>
+</head>
+<body>
+  <h1>Welcome to Nagahomestay</h1>
+
+  <h2>Fasilitas</h2>
+  <ul>
+    <li>🚗 Parkir tersedia</li>
+    <li>📷 CCTV aktif</li>
+    <li>🍳 Dapur Umum dengan fasilitas lengkap</li>
+    <li>📶 Wi-Fi tersedia</li>
+    <li>🔥 Air panas tersedia</li>
+    <li>❄️ AC (Pendingin Ruangan)</li>
+    <li>🛫 Kamar mandi dalam</li>
+    <li>📺 TV tersedia</li>
+  </ul>
+
+  <h2>Jenis Kamar</h2>
+  <ul>
+    <li><strong>Kamar 1:</strong> Tidak ada air panas, listrik sendiri - <strong>Harga: Rp150.000/malam</strong></li>
+    <li><strong>Kamar 2:</strong> Air panas tersedia, listrik termasuk - <strong>Harga: Rp200.000/malam</strong></li>
+    <li><strong>Kamar 3 (lantai atas):</strong> Air panas tersedia, listrik sendiri - <strong>Harga: Rp225.000/malam</strong></li>
+  </ul>
+
+  <h2>Kontak</h2>
+  <p>Hubungi kami melalui WhatsApp (bisa diedit sesuai kebutuhan):</p>
+  <ul>
+    <li><a href="https://wa.me/6282324135717" target="_blank">+62 823-2413-5717</a></li>
+    <li><a href="https://wa.me/6281128009333" target="_blank">+62 811-2800-9333</a></li>
+  </ul>
+
+  <h2>Pemesanan & Pembayaran</h2>
+  <p>Silakan pilih tanggal kedatangan dan keberangkatan Anda:</p>
+  <label for="checkin">Check-in:</label>
+  <input type="date" id="checkin" name="checkin">
+  <br>
+  <label for="checkout">Check-out:</label>
+  <input type="date" id="checkout" name="checkout">
+  <br><br>
+  <a id="book-now" href="#" target="_blank">Kirim Pemesanan via WhatsApp</a>
+
+  <script>
+    const checkin = document.getElementById('checkin');
+    const checkout = document.getElementById('checkout');
+    const link = document.getElementById('book-now');
+    const number = '6282324135717';
+
+    function updateLink() {
+      const inDate = checkin.value;
+      const outDate = checkout.value;
+      const message = `Halo, saya ingin memesan kamar di Nagahomestay.\\nCheck-in: ${inDate}\\nCheck-out: ${outDate}`;
+      const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+      link.href = url;
+    }
+
+    checkin.addEventListener('change', updateLink);
+    checkout.addEventListener('change', updateLink);
+  </script>
+
+  <h3>Metode Pembayaran</h3>
+  <p>Transfer ke rekening berikut:</p>
+  <ul>
+    <li>Bank: BCA</li>
+    <li>Nomor Rekening: 0312825358</li>
+    <li>Atas Nama: Bouzid Kherici</li>
+  </ul>
+</body>
+</html>
